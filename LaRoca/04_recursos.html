@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Iglesia Bautista La Capilla de la Roca</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<script type="text/javascript" src="js/modernizr-site.js"></script>
+	</head>
+
+	<body>
+		<div id="container">
+			<p>
+				<center>
+					<p><h1>Recursos</h1></p>
+				</center>
+				<p>
+					<center><h2>Verso del día</h2></center>
+					<p>
+						<script src="https://www.biblegateway.com/votd/votd.write.callback.js"></script>
+						<script src="https://www.biblegateway.com/votd/get/?format=json&version=RVR1960&callback=BG.votdWriteCallback"></script>
+						<!-- alternative for no javascript -->
+						<noscript>
+						<iframe framespacing="0" frameborder="no" src="https://www.biblegateway.com/votd/get/?format=html&version=RVR1960">View Verse of the Day</iframe> 
+						</noscript>
+					</p>
+					<center><h2>Enlaces de interés</h2></center>
+					<ul>
+						<li><a href="https://redradiointegridad.com/" target="_blank">Radio Integridad.</a></li>
+						<li><a href="https://evangelio.blog/" target="_blank">Evangelio.Blog</a></li>
+						<li><a href="http://centroprenatal.org" target="_blank">Centro Pre-natal Vida Nueva</a></li>
+						<li><a id="devocional" href="http://es.gospeltranslations.org/wiki/La_Chequera_del_Banco_de_la_Fe/1_de_Enero" target="_blank">Devocional "La Chequera del Banco de la Fe" para hoy, de Charles H. Spurgeon</a></li>
+					</ul>
+				</p>
+			</p>
+		</div>
+		<!-- Cambia la fecha del enlace al devocional del día -->
+		<script type="text/javascript">
+			function dateFormatter() {
+				var fecha = new Date();
+			    var dia = fecha.getDate();
+			    var nummes = fecha.getMonth()+1;
+			    var mes = ' ';
+			    switch(nummes)
+			    {
+			    	case 1:	mes = 'Enero'; break;
+			    	case 2: mes = 'Febrero'; break;
+			    	case 3: mes = 'Marzo'; break;
+			    	case 4: mes = 'Abril'; break;
+			    	case 5: mes = 'Mayo'; break;
+			    	case 6: mes = 'Junio'; break;
+			    	case 7: mes = 'Julio'; break;
+			    	case 8: mes = 'Agosto'; break;
+			    	case 9: mes = 'Septiembre'; break;
+			    	case 10: mes = 'Octubre'; break;
+			    	case 11: mes = 'Noviembre'; break;
+			    	case 12: mes = 'Diciembre'; break;
+			    }
+			    fechaCompuesta = dia.toString() + '_de_' + mes;
+			    return fechaCompuesta;
+			}
+			document.getElementById("devocional").href = 'http://es.gospeltranslations.org/wiki/La_Chequera_del_Banco_de_la_Fe/'+dateFormatter();
+		</script>
+	</body>
+
+</html>
